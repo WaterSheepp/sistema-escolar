@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pedroarmas.controller.AsignaturasController">
+   <effect>
+      <InnerShadow choke="0.16" color="#79a8e1" height="83.27" radius="38.17" width="71.41" />
+   </effect>
+   <children>
+      <Label layoutX="171.0" layoutY="14.0" text="Asignatura">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnReporte" layoutX="307.0" layoutY="468.0" mnemonicParsing="false" onAction="#printReport" prefHeight="17.0" prefWidth="70.0" text="Reporte" />
+      <Button fx:id="btnEditar" layoutX="221.0" layoutY="468.0" mnemonicParsing="false" onAction="#editAsignatura" prefHeight="17.0" prefWidth="70.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="136.0" layoutY="468.0" mnemonicParsing="false" onAction="#removeAsigatura" prefHeight="17.0" prefWidth="70.0" text="Eliminar" />
+      <Button fx:id="btnNuevo" layoutX="51.0" layoutY="468.0" mnemonicParsing="false" onAction="#addAreasCase" prefHeight="17.0" prefWidth="70.0" text="Nuevo" />
+      <TableView fx:id="tlbAsignaturas" layoutX="10.0" layoutY="259.0" onMouseClicked="#seleccionarDatos" prefHeight="164.0" prefWidth="413.0">
+         <columns>
+            <TableColumn fx:id="clmIdCodigo" prefWidth="92.0" text="Código" />
+            <TableColumn fx:id="clmNoAsignatura" prefWidth="201.0" text="Asignatura" />
+            <TableColumn fx:id="clmIdGrado" prefWidth="114.0" text="Código Grado" />
+         </columns>
+         <effect>
+            <DropShadow height="71.41" radius="27.792499999999997" spread="0.2" width="41.76" />
+         </effect>
+      </TableView>
+      <ImageView fitHeight="44.0" fitWidth="37.0" layoutX="14.0" layoutY="18.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/return.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbidAsignatura" disable="true" layoutX="115.0" layoutY="92.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label layoutX="35.0" layoutY="96.0" text="Id Asignatura:" />
+      <Label layoutX="245.0" layoutY="96.0" text="Codigo Grado:" />
+      <ComboBox fx:id="cmbIdGrado" disable="true" layoutX="329.0" layoutY="92.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label layoutX="161.0" layoutY="159.0" text="Nombre Asignatura:" />
+      <TextField fx:id="txtNombreAsignatura" editable="false" layoutX="142.0" layoutY="185.0" />
+   </children>
+</AnchorPane>
